@@ -304,4 +304,118 @@ var itung = ['satu','dua','tiga']
 var itung2 = ['empat','lima','enam']
 var itung3 = [...itung,...itung2]
 console.log(itung3);
-//5:17
+
+// aaray dectructuring
+function f(){
+    return [1,2,3]
+}
+
+var [q, ,m] = f();
+console.log(q,m);
+
+var warna = ['red','blue','yellow','pink','purple']
+
+var [t,o,...m] = warna
+console.log(t,o,m);
+
+//object destructuring
+// disini urutan gak penting tapi nama penting(kalo arraykan urutan yg penting)
+const murid ={aran : "Raffi",kelas : 'Informatika_c', kampus :'UIN'}
+
+const {aran,kelas,kampus }= murid;
+console.log(aran,kelas,kampus); 
+
+const orang_1 = {
+    numu : "John",
+    omor : 30,
+    gender : "male",
+    country : "USA"
+}
+
+var {numu,omor,gender,country} = orang_1
+console.log(numu,omor,gender,country);
+
+//ganti nama destructuring
+const nomo = {x: 300,u : 900}
+const {x:makan,u:minum} = nomo
+console.log(makan);
+console.log(minum);
+
+
+//object destructuring dan rest operator
+const orang_2= {
+    numu : "John",
+    tete :"gede",
+    omor : 30,
+    gender : "male",
+    country : "USA"
+}
+const {numu:neme,omor:memer,...sisanya} = orang_2;
+console.log(neme);
+console.log(memer);
+console.log(sisanya);
+
+//function destructuring
+function gabut(orang_2){
+    console.log(`nama : ${orang_2.numu}`);
+    console.log(`sisanya : ${orang_2.umur}`);
+    console.log(`country : ${orang_2.country}`);
+}
+
+function gabut1({numu,tete,omor}){
+    console.log(`nAma : ${numu}`);
+    console.log(`ukuran TT : ${tete}`);
+    console.log(`umur : ${omor}`);
+}
+
+gabut(orang_2);
+gabut1(orang_2);
+
+//nested destructuring
+const users = [
+    {
+      id: 1,
+      profile: { username: "raffi", email: "raffi@example.com" }
+    },
+    {
+      id: 2,
+      profile: { username: "joko", email: "joko@example.com" }
+    }
+  ];
+  
+  const [
+    {
+      profile: { username: firstUsername }
+    },
+    {
+      profile: { email: secondEmail }
+    }
+  ] = users;
+  
+  console.log(firstUsername); // raffi
+  console.log(secondEmail);   // joko@example.com
+
+
+  const product = {
+    title: "Laptop",
+    specs: {
+      dimensions: [34, 24, 2],
+      weight: "1.5kg"
+    }
+  };
+  
+  const {
+    title,
+    specs: {
+      dimensions: [width, height, thickness],
+      weight
+    }
+  } = product;
+  
+  console.log(title);     // Laptop
+  console.log(width);     // 34
+  console.log(height);    // 24
+  console.log(thickness); // 2
+  console.log(weight);    // 1.5kg
+// 6:09
+//ternary operator
