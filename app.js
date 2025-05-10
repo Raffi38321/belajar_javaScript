@@ -383,14 +383,7 @@ const users = [
     }
   ];
   
-  const [
-    {
-      profile: { username: firstUsername }
-    },
-    {
-      profile: { email: secondEmail }
-    }
-  ] = users;
+  const [{profile: { username: firstUsername }},{profile: { email: secondEmail }}] = users;
   
   console.log(firstUsername); // raffi
   console.log(secondEmail);   // joko@example.com
@@ -417,5 +410,49 @@ const users = [
   console.log(height);    // 24
   console.log(thickness); // 2
   console.log(weight);    // 1.5kg
-// 6:09
-//ternary operator
+
+//ternary operator tu kaya if else cuman lebih pendek
+const jj = ()=>{
+    if(7<9){
+        return 'tollol';
+    }
+    else{
+        return 'hebat';
+    }
+}
+
+console.log(jj());
+
+//ini ternary operator 
+const pl = ()=>{
+    return 7<9 ? 'tollol' :'hebat'
+}
+
+console.log(pl());
+
+var uang = 10;
+var ngecekduit = uang ? 'buy prodect' : 'bawa duit tlo';
+
+console.log(ngecekduit);
+
+
+var person_3 = {
+    nama : 'bujang',
+    age : 20,
+    silit : 'ireng'
+};
+
+
+// ini cara looping object ini juga bisa dipake ke array 
+for(let key in person_3){
+    console.log(key,person_3[key]);
+}
+
+
+//for of loop
+let peopels = ['bujang','lonte','mulyono']
+for (const peopel of peopels) {
+    console.log(peopel);
+}
+
+// 6:29
