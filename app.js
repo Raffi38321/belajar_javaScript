@@ -455,4 +455,57 @@ for (const peopel of peopels) {
     console.log(peopel);
 }
 
-// 6:29
+// for each
+var number = [1,2,3,4,5,6]
+
+var sum = 0;
+number.forEach((arr)=>{
+    sum += arr;
+})
+
+// function adder(arr){
+//     sum += arr;
+// }
+
+// number.forEach(adder);
+
+console.log(sum);
+
+// map()
+//bedanya map() method ama foreach itu kalo foreach pake arrnya langsung sedangkan map() ngebuat array baru
+var nomor = [90,6,3,10,2,8]
+const result = nomor.map(nomo=>{
+    return nomo * 10
+})
+
+console.log(result);
+
+// filter() method kaya namanya ini ngebalikin elemen yang memenuhi syarat
+const computer = [
+    {ram:4,HDD:100},
+    {ram:8,HDD:200},
+    {ram:16,HDD:300},
+    {ram:32,HDD:400},
+]
+
+console.log(computer.filter(comput => {
+    return comput.ram > 16;
+}));
+
+const umur = [19,17,20,6,50]
+
+console.log(umur.filter(age =>{
+    return age >18;
+}));
+
+
+// method find() ini nge return element yang paling pertama memenuhi syarat beda kaya filter yang ngelooping sampe akhir 
+// ini juga bakal ngereturn undifined kalo misal elementnya ga ada yang memenuhi
+const post = [
+    {id :1,content :"good post"},
+    {id :2,content :"funny post"},
+    {id :3,content :"funny post"}
+]
+
+console.log(post.find(po => po.content === "funny post"));
+//6:54
