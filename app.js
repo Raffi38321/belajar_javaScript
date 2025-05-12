@@ -585,3 +585,9 @@ console.log(hamdeh);
 
 
 //7:49
+
+function nyoba(a){
+    return a;
+}
+
+console.log(nyoba([1,2,3,4,5,6]));
