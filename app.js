@@ -508,4 +508,80 @@ const post = [
 ]
 
 console.log(post.find(po => po.content === "funny post"));
-//6:54
+
+
+// some() dan every() method di js ini fungsinya untuk ngecek elemen yang ada di array
+// some() bakal ngembaliin true jika ada 1 atau lebih element yang memenuhi syarat
+// every() bakal balikin true jika semua elemet di array memenuhi syarat
+let products = [
+    {name:"checker",category:"game"},
+    {name: "haryy poteter",category:"books"},
+    {name: "laptop",category:"electronics"},
+    {name: "wuthering heights",category:"books"}
+] 
+
+console.log(products.every(produc => produc.category == "books"));
+console.log(products.some(produc => produc.category == "books"));
+
+
+// reduce() method
+//var nomor = [90,6,3,10,2,8]
+const calculator = nomor.reduce((p,c)=>{
+    return p = p+c;
+},0)
+
+console.log(calculator);
+
+//----------------------------------------------------------------------------------------------------------------
+// map javascript 
+var contohMap = new Map();
+//cara masukin data ke map
+contohMap.set("a",1);
+contohMap.set("b",2);
+contohMap.set("c",3);
+
+// cara traverse
+for(let [key,value] of contohMap){
+    console.log(`ini key: ${key}, ini value ${value}`);
+}
+//cara manggil satu
+console.log(contohMap.get("a"));
+
+//cara liat size
+console.log(contohMap.size);
+
+//cara ngapus di map,ngapusnya pake key
+contohMap.delete("b");
+console.log(contohMap.size);
+
+//set--------------------------------------------------------------------------------------------------------------------
+//set, set ini kaya array cuman udah pasti unik elemennya ga ada yang sama
+var contohsSet = new Set();
+// cara nambah element di set
+contohsSet.add("a")
+contohsSet.add("b")
+contohsSet.add("c")
+contohsSet.add("a")
+contohsSet.add("b")
+contohsSet.add("c")
+contohsSet.add("d")
+
+console.log(contohsSet.size);
+contohsSet.delete("b");
+console.log(contohsSet.size);
+
+for (var index of contohsSet){
+    console.log(`ni elmentnya: ${index}`);
+}
+
+//---------------------------------------------------------------------------------------------------------------
+//Simbol JavaScript adalah tipe data primitif baru yang dibuat menggunakan fungsi Symbol(). 
+// Simbol ini merupakan pengenal unik dan digunakan dalam berbagai cara
+var contohSymbol = Symbol("hola")
+var hamdeh = {}
+hamdeh[contohSymbol] = "Kontol"
+
+console.log(hamdeh);
+
+
+//7:49
